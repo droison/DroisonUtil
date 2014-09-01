@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="dexedLibs">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/bin/dexedLibs/android-support-v4-c2731893b17fe18cb54a508ea2163cd5.jar!/" />
+      <root url="jar://$PROJECT_DIR$/bin/dexedLibs/fastjson-1.1.26-29e1c3018ec1c80446cef3986a51c863.jar!/" />
+      <root url="jar://$PROJECT_DIR$/bin/dexedLibs/jackson-mapper-asl-1.9.11-226de9303c5bf3862486757946d4ec58.jar!/" />
+      <root url="jar://$PROJECT_DIR$/bin/dexedLibs/jackson-core-asl-1.9.11-0fed8dea754efe5b301e784ddd3eb446.jar!/" />
+      <root url="jar://$PROJECT_DIR$/bin/dexedLibs/android-support-v7-appcompat-eed00c0073dcaa8399e375eeb61e41bf.jar!/" />
+      <root url="jar://$PROJECT_DIR$/bin/dexedLibs/appcompat_v7_4-a98555e9288b4f7bb104892fdd292252.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
