@@ -14,6 +14,8 @@ import java.io.IOException;
 
 public class ImageUtils {
 	private static final String TAG = "ImageUtils";
+    private static int DeviceWidth;
+    private static int DeviceHeight;
 
 	/**
 	 * Stores an image on the storage
@@ -46,14 +48,14 @@ public class ImageUtils {
 	 * @return the screen height
 	 */
 	public static int getScreenHeight(Activity context) {
-
-		Display display = context.getWindowManager().getDefaultDisplay();
-		if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB_MR2) {
-			Point size = new Point();
-			display.getSize(size);
-			return size.y;
-		}
-		return display.getHeight();
+        if (DeviceHeight == 0)
+        {
+            Display display = context.getWindowManager().getDefaultDisplay();
+            Point size = new Point();
+            display.getSize(size);
+            DeviceWidth = size.y;
+        }
+        return DeviceHeight;
 	}
 
 	/**
@@ -63,13 +65,12 @@ public class ImageUtils {
 	 * @return the screen width
 	 */
 	public static int getScreenWidth(Activity context) {
-
-		Display display = context.getWindowManager().getDefaultDisplay();
-		if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB_MR2) {
-			Point size = new Point();
-			display.getSize(size);
-			return size.x;
-		}
-		return display.getWidth();
-	}
+        if(DeviceWidth==0){
+            Display display = context.getWindowManager().getDefaultDisplay();
+            Point size = new Point();
+            display.getSize(size);
+            DeviceWidth = size.x;
+        }
+        return  DeviceWidth;
+    }
 }
