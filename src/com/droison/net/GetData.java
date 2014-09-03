@@ -17,7 +17,7 @@ public class GetData implements Runnable {
 	private String url;
 	private String TAG = "GetList";
 
-	public GetData(Activity mContext, Handler mHandler, String url, int type) {
+	public GetData(Activity mContext, Handler mHandler, String url) {
 		this.mContext = mContext;
 		this.mHandler = mHandler;
 		this.url = url;
