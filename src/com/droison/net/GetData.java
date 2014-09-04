@@ -52,7 +52,7 @@ public class GetData implements Runnable {
 			break;
 		default:
 			mHandler.sendEmptyMessage(Constant.HANDLER_HTTPSTATUS_ERROR);
-			Log.d("StringGet", "" + hre.getHttpResponseCode());
+			Log.d("StringGet", url + hre.getHttpResponseCode());
 			break;
 		}
 	}
