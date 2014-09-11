@@ -79,7 +79,6 @@ public class PullToRefreshView extends LinearLayout {
 	/**
 	 * header refresh time
 	 */
-	private TextView mHeaderUpdateTextView;
 	/**
 	 * footer refresh time
 	 */
@@ -165,7 +164,6 @@ public class PullToRefreshView extends LinearLayout {
 
 		mHeaderImageView = (ImageView) mHeaderView.findViewById(R.id.pull_to_refresh_image);
 		mHeaderTextView = (TextView) mHeaderView.findViewById(R.id.pull_to_refresh_text);
-		mHeaderUpdateTextView = (TextView) mHeaderView.findViewById(R.id.pull_to_refresh_updated_at);
 		mHeaderProgressBar = (ProgressBar) mHeaderView.findViewById(R.id.pull_to_refresh_progress);
 		// header layout
 		measureView(mHeaderView);
@@ -408,7 +406,6 @@ public class PullToRefreshView extends LinearLayout {
 			// 当header view的topMargin>=0时，说明已经完全显示出来了,修改header view 的提示状态
 			if (newTopMargin >= 0 && mHeaderState != RELEASE_TO_REFRESH) {
 				mHeaderTextView.setText(R.string.pull_to_refresh_release_label);
-				mHeaderUpdateTextView.setVisibility(View.VISIBLE);
 				mHeaderImageView.clearAnimation();
 				mHeaderImageView.startAnimation(mFlipAnimation);
 				mHeaderState = RELEASE_TO_REFRESH;
@@ -588,12 +585,7 @@ public class PullToRefreshView extends LinearLayout {
 	 *            Last updated at.
 	 */
 	public void setLastUpdated(CharSequence lastUpdated) {
-		if (lastUpdated != null) {
-			mHeaderUpdateTextView.setVisibility(View.VISIBLE);
-			mHeaderUpdateTextView.setText(lastUpdated);
-		} else {
-			mHeaderUpdateTextView.setVisibility(View.GONE);
-		}
+
 	}
 
 	/**
